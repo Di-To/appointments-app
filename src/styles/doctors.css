@@ -1,0 +1,39 @@
+.second-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 100vh;
+  width: 90%;
+  margin: 0 5%;
+}
+
+.upper-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.how-can-we-help {
+  margin-top: 5%;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: flex-start;
+  width: 90%;
+  height: 40%;
+}
+
+@media screen and (min-width: 1600px) {
+  .second-section-container {
+    height: 75vh;
+  }
+
+  .body-container {
+    width: 60%;
+  }
+}

@@ -1,0 +1,88 @@
+.header-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fef7ef;
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.inner-header {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-around;
+  height: 60%;
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.lower-container {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lower-container a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.left-buttons {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  font-size: 18px;
+}
+
+.get-started {
+  display: flex;
+  height: 100%;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c5251;
+  color: white;
+  border-radius: 8px;
+}
+
+.learn-more {
+  display: flex;
+  height: 100%;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border-radius: 8px;
+  border: solid 1px black;
+}
+
+.right-buttons {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-buttons a {
+  display: flex;
+  justify-content: center;
+
+  color: black;
+  font-size: 14px;
+  width: 33%;
+}
+
+.center-button-with-boundaries {
+  border-left: solid 1px black;
+}
+
+.right-button-with-boundaries {
+  border-left: solid 1px black;
+}

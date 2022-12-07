@@ -1,0 +1,23 @@
+.current-month {
+  grid-column: span 7;
+}
+
+.cell-style {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+.days-of-week {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.active-style {
+  background-color: #fdf5ee;
+  border-radius: 50%;
+  font-weight: 800;
+}
