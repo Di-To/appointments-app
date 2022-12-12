@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "../styles/booking-form.css";
 
 export default function BookingForm() {
@@ -7,7 +7,7 @@ export default function BookingForm() {
 
   const genderSelection = ["male", "female", "none"];
   const [isChecked, setIsChecked] = useState(false);
-  const [isSelected, setIsSelected] = useState();
+  const [isSelected, setIsSelected] = useState("");
   const navigate = useNavigate();
   const [values, setValues] = useState({
     firstName: "",
@@ -33,6 +33,16 @@ export default function BookingForm() {
     values["acceptTerms"] = isChecked;
     values["gender"] = isSelected;
     console.log(values);
+    setValues({
+      firstName: "",
+      lastName: "",
+      emailAddress: "",
+      dayOfBirth: "",
+      monthOfBirth: "",
+      yearOfBirth: "",
+    });
+    setIsChecked(false);
+    setIsSelected("");
   };
 
   return (
@@ -52,6 +62,7 @@ export default function BookingForm() {
             <select
               className="every-input gender-input"
               onChange={handleSelectCheck}
+              value={isSelected}
             >
               <option value="" defaultValue>
                 Gender
@@ -154,11 +165,13 @@ export default function BookingForm() {
               >
                 Cancel
               </button>
-              <input
-                className="form-button submit-button"
-                type="submit"
-                value="Book Appointment"
-              />
+              <Link to={"/success"}>
+                <input
+                  className="form-button submit-button"
+                  type="submit"
+                  value="Book Appointment"
+                />
+              </Link>
             </div>
           </form>
         </div>

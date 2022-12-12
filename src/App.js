@@ -8,6 +8,7 @@ import ErrorPage from "./components/ErrorPage";
 import AppointmentPage from "./components/Appointment";
 import AppointmentIntro from "./components/AppointmentIntro";
 import BookingForm from "./components/BookingForm";
+import Succes from "./components/Succes";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         path="/booking/:treatmentId/form/:timeSlot"
         element={<BookingForm />}
       />
+      <Route path="/success" element={<Succes />} />
       <Route path="/*" element={<ErrorPage />} />
     </Routes>
   );

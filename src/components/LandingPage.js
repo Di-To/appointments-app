@@ -9,14 +9,14 @@ export default function LandingPage() {
       <header className="App-header">
         <Main />
       </header>
-      <body className="app-body">
+      <div className="app-body">
         <div className="history-container">
           <Mission />
         </div>
         <div className="full-bleed treat-section">
           <Doctors />
         </div>
-      </body>
+      </div>
     </div>
   );
 }

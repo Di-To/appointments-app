@@ -24,7 +24,6 @@ export default function CalendarComponent({
   const handleClickDate = (index) => {
     const date = setDate(value, index);
     onChange && onChange(date);
-    console.log(date);
   };
 
   const currentDate = format(value, "EEEE, LLLL dd, yyyy");
@@ -60,8 +59,6 @@ export default function CalendarComponent({
                 onClick={() => {
                   handleClickDate(index + 1);
                   setOpenAppoint(docOpenings);
-                  console.log(docOpenings);
-                  console.log(dateA);
                 }}
                 key={date}
               >

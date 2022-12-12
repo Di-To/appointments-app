@@ -21,10 +21,6 @@ export default function AppointmentPage() {
   const [calendarKey, setCalendarKey] = useState(0);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(selectedDoc);
-  }, [selectedDoc]);
-
   return (
     <div className="appointment-container">
       <div className="inner-appointment-container">
