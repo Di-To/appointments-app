@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   IoEyeOutline,
   IoFitnessOutline,
@@ -14,9 +14,12 @@ import { treatments } from "../mockData";
 export default function CardComponent({ setSelected }) {
   let navigate = useNavigate();
 
+  // data imported from file mockcata.js
+
   const [treatList, setTreatList] = useState(treatments);
 
   return (
+    // Each card has an id and an imported icon as well as some basic info. When clicking one you navigate to the Appointment component see routes in App.js
     <div className="treatment-container">
       {treatList.map((treatment) => (
         <div

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "../styles/booking-form.css";
 
+// the booking form is quite straight forward as it has nothing that is particularly interesting.
+
 export default function BookingForm() {
   const { timeSlot } = useParams();
 

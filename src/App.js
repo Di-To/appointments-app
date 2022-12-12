@@ -1,7 +1,4 @@
 import "./../src/styles/app.css";
-// import Main from "./components/Main";
-// import Doctors from "./components/Doctors";
-// import Mission from "./components/Mission";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import ErrorPage from "./components/ErrorPage";
@@ -12,6 +9,7 @@ import Succes from "./components/Succes";
 
 function App() {
   return (
+    //the most important part! I'm building param over param to filter data. In case you're not too familiar with react-router-dom I'll be glad to explain how my routes are built :)
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/getstarted" element={<AppointmentIntro />} />

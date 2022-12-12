@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../styles/appointments.css";
 import {
@@ -13,6 +13,7 @@ import { treatments, practitioners } from "../mockData";
 import CalendarComponent from "./Calendar";
 
 export default function AppointmentPage() {
+  // using the parameters given by the previous treatment I define which info to render.
   let { treatmentId } = useParams();
   const currentParam = parseInt(treatmentId);
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -50,6 +51,7 @@ export default function AppointmentPage() {
               <IoNuclearOutline />
             ) : null}
           </div>
+          {/* In order to know which doctor is available I filter the treatment based on the params */}
           <div>
             {treatments
               .filter((service) => service.id === currentParam)
@@ -65,6 +67,7 @@ export default function AppointmentPage() {
         <div className="booking-options-container">
           <div className="practitioners-container">
             <h3> Who should treat you? </h3>
+            {/* When I know what the treatment is, I render the doctors who are listed for that treatment. See mockdata.js file (I had to guess how a Json for booking docs look) */}
             {practitioners
               .filter((doc) => doc.treatment.includes(treatmentId))
               .map((filteredDoc, index) => (
@@ -93,6 +96,7 @@ export default function AppointmentPage() {
                 </div>
               ))}
           </div>
+          {/* The calendar should appear on click but I didn't manage to do that. In any case, it is dependant on the doctor that has been selected */}
           <div className="calendar-container">
             <CalendarComponent
               key={calendarKey}

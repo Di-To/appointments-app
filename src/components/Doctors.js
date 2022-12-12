@@ -15,10 +15,12 @@ export default function Doctors() {
 
   useEffect(() => {
     console.log(selected);
-  });
+  }, [selected]);
+
   return (
     <div className="second-section-container">
       <div className="upper-text-container">
+        {/* Because I saw the same structure over and over H1, H2, p.. I made it into a component */}
         <TextComponent
           overHeader={upperTitle}
           mainHeader={midTitle}
@@ -28,6 +30,7 @@ export default function Doctors() {
           <TextComponent subHeader={subtitle} description={secondLowerTitle} />
         </div>
       </div>
+      {/* Renders the actual treatment cards */}
       <div className="body-container">
         <CardComponent setSelected={setSelected} />
       </div>

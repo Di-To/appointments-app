@@ -1,16 +1,16 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/openings.css";
 
 export default function Openings({ doctorOpenings, currentDate }) {
   const lengthVariable = doctorOpenings.length;
-  const { treatmentId } = useParams();
 
   return (
     <div className={"openings-container"}>
       <h3>Available appointments</h3>
       <p className="current-date-element">{currentDate}</p>
       <div className={"openings-inner-container"}>
+        {/* Here I render the available hours for the selected doctor (or not if there's nothing available in a specific day) */}
         {lengthVariable >= 1 ? (
           doctorOpenings.map((time, index) => {
             return (

@@ -34,6 +34,7 @@ export default function CalendarComponent({
     <div className="calendar-outer-container">
       <div className="calendar-inner-container">
         <h3>Available Dates</h3>
+        {/* Full disclosure, I watched a tutorial for the calendar since I didn't know how to do it. However turned out quite well. It uses a library to set formate dates and calculate how many days should be each month */}
         <div className="calendar-grid">
           <Cell clName={"current-month"}> {format(value, "LLLL yyyy")}</Cell>
 
@@ -72,6 +73,9 @@ export default function CalendarComponent({
           })}
         </div>
       </div>
+      {/* The cool part is that I adapted the calendar from doing nothing to displaying the available appointments based on the props I passed. */}
+
+      {/* Openings show the available hours that doctors have per each date */}
       <div className="open-hours-container">
         <Openings doctorOpenings={openAppoint} currentDate={currentDate} />
       </div>
