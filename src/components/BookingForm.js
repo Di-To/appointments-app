@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "../styles/booking-form.css";
 
 // the booking form is quite straight forward as it has nothing that is particularly interesting.
@@ -45,6 +45,7 @@ export default function BookingForm() {
     });
     setIsChecked(false);
     setIsSelected("");
+    navigate("/success");
   };
 
   return (
@@ -167,13 +168,11 @@ export default function BookingForm() {
               >
                 Cancel
               </button>
-              <Link to={"/success"}>
-                <input
-                  className="form-button submit-button"
-                  type="submit"
-                  value="Book Appointment"
-                />
-              </Link>
+              <input
+                className="form-button submit-button"
+                type="submit"
+                value="Book Appointment"
+              />
             </div>
           </form>
         </div>
